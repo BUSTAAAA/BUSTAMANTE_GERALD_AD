@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(PNGPALANG.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainContent {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.login {
+    background-image: url(CUTE.png);
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 450px;
+    border-radius: 25%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    text-align: center;
+    font-size: 400%;
+    padding-bottom: 27%;
+    color: lightcyan;
+}
+
+button {
+    width: 100%;
+    height: 32px;
+}
+
+label {
+    font-family: ;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 130%;
+    padding-bottom: 4px;
+    padding-top: 8px;
+}
+
+input {
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20%;
+}
