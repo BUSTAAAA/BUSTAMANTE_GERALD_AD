@@ -19,8 +19,8 @@ export class Exercise3Controller {
     }   
 
     @Get('/PrimeNumber/:num')
-    primeNumber(num:number){
-
+    primeNumber(@Param('num') num:number){
+        return this.e3.primenumber(num);
     }
 
 }
