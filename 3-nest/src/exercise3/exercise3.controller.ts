@@ -18,10 +18,9 @@ export class Exercise3Controller {
       return this.e3.loopsTriangle(parsedheight , "");
     }   
 
-    @Get('/PrimeNumber')
-    primeNumber(num:number){
+    @Get('/PrimeNumber/:num')
+    primeNumber(@Param('num') num:number){
         return this.e3.primenumber(num);
-        
     }
 
 }

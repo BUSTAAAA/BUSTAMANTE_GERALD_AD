@@ -17,7 +17,6 @@ export class Exercise3Service {
     return ;
 
     primenumber(num:number){
-        num = 13;
         let isPrime = true;
 
     if (num === 1) {
