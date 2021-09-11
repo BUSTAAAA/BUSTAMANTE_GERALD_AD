@@ -17,6 +17,10 @@ export class Exercise3Service {
     return ;
 
     primenumber(num:number){
+<<<<<<< HEAD
+=======
+        num = 13;
+>>>>>>> NOOBIE
         let isPrime = true;
 
     if (num === 1) {
