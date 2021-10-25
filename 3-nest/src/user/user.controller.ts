@@ -1,51 +1,59 @@
-import { Controller, Get, Put, Post, Body, Delete, Param, Patch } from '@nestjs/common';
-import { get } from 'http';
-import { User } from './user.module';
-import { UserService } from './user.service';
-
-@Controller('user')
-export class UserController {
-    constructor(private readonly userService: UserService) { }
-
-    @Get('/all')
-    getAll() {
-        return this.userService.getAll();
-    }
-
+import {
+    Body,
+    Controller,
+    Delete,
+    Get,
+    Param,
+    Patch,
+    Post,
+    Put,
+  } from '@nestjs/common';
+  
+  import { UserService } from './user.service';
+  
+  @Controller('user')
+  export class UserController {
+    constructor(private readonly userService: UserService) {}
     @Post('/register')
-    addUser(@Body() body: any) {
-        return this.userService.addUser(body);
+    register(@Body() body: any) {
+      return this.userService.register(body);
     }
-
+  
+    @Post('/login')
+    login(@Body('email') email: string, @Body('password') password: string) {
+      return this.userService.login(email, password);
+    }
+  
+    @Get('/all')
+    getAllUser() {
+      return this.userService.getAll();
+    }
+    @Get('/search/:term')
+    searchUser(@Param('term') term: string) {
+      return this.userService.searchUser(term);
+    }
+  
+    @Get('/:id')
+    getUserID(@Param('id') id: string) {
+      return this.userService.getOne(id);
+    }
+  
     @Put('/:id')
-    replaceUser(@Param("id") id: number, @Body() body: any) {
-        return this.userService.replaceUser(id, body);
+    replaceValuePut(@Param('id') id: string, @Body() body: any) {
+      return this.userService.replaceValuePut(id, body);
     }
-
-
+  
+    @Patch('/:id')
+    replaceValuePatch(@Param('id') id: string, @Body() body: any) {
+      return this.userService.replaceValuePatch(id, body);
+    }
+  
     @Delete('/:id')
-    deleteUser(@Param("id") id: number) {
-        return this.userService.deleteUser(id);
+    deleteUser(@Param('id') id: string) {
+      return this.userService.deleteUser(id);
     }
-
-    @Get(`/getUser/:id`)
-    Userid(@Param("id") id: number, @Body() body: any)
-    {
-        return this.userService.Userid(id, body);
-    }
-
-    @Get("search/:term")
-    UserSearch(@Body() body:any){
-       return this.userService.UserSearch(body);
-   }
-
-   @Patch(`patchUser/:id`)
-   patchUser(@Param("id") id:number, @Body() body:any){
-       return this.userService.patchUser(id,body);
-   }
-   
-   @Post("/login")
-   login(@Body() body:any){
-       return this.userService.login(body);
-   }
-}
+  
+  
+  
+  }
+  

@@ -1,0 +1,35 @@
+<div class="mainContent">
+    <div class="login">
+        <div class="inputs">
+            <p>WELCOME!</p>
+            <label for="EMAIL">Email</label>
+            <input type="email" name="EMAIL" [formControl]="fCEmail" />
+            <label for="PASSWORD">Password</label>
+            <input type="password" name="PASSWORD" [formControl]="fCPassword" />
+        </div>
+        <!-- <div>{{ fCEmail.value }} {{ fCPassword }}</div> -->
+
+        <!-- <p>{{ requestResult | json }}</p> -->
+        <div class="actions">
+            <button (click)="login()">LOGIN</button>
+            <button (click)="nav('register')">REGISTER</button>
+        </div>
+        <!-- to test if login works -->
+        <!-- <div>
+            <h3>{{userCredential1}}</h3>
+            <h3>{{userCredential2}}</h3>
+        </div>
+        <div *ngIf="userCredential1.length>=5">
+            "Username has greater length or more than 5"
+        </div>
+        <div *ngIf="userCredential1.length<5">
+            "Username has lesser length than 5"
+        </div>
+        <div *ngFor="user of users; let i = index">
+            <div>
+                <h1>{{users[i].username}}</h1>
+                <h2>{{users[i].password}}</h2>
+            </div>
+        </div> -->
+    </div>
+</div>
