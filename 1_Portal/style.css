@@ -16,32 +16,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background-image: url(PNGPALANG.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.mainContent {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-
-.login {
-    background-image: url(CUTE.png);
-    background-position: center;
-    background-size: cover;
-    width: 500px;
-    height: 450px;
-    border-radius: 25%;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-}
-
 p {
     text-align: center;
     font-size: 400%;
@@ -55,7 +29,7 @@ button {
 }
 
 label {
-    font-family: ;
+    font-family: cursive;
     font-style: italic;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -73,4 +47,10 @@ input {
     display: flex;
     flex-direction: column;
     padding-bottom: 20%;
+}
+
+body {
+    background-image: url(PNGPALANG.png);
+    background-size: cover;
+    background-position: center;
 }
